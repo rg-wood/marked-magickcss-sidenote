@@ -1,0 +1,54 @@
+{
+  "name": "marked-magickcss-sidenote",
+  "version": "0.0.0",
+  "description": "A marked extension to support magick.css sidenotes as GFM footnotes",
+  "main": "./dist/index.cjs",
+  "keywords": [
+    "marked",
+    "marked-extension",
+    "gfm",
+    "footnote"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "changelog.md",
+    "readme.md"
+  ],
+  "scripts": {
+    "start": "vite",
+    "clean": "rimraf dist",
+    "dev": "vite build --watch",
+    "build": "vite build && npm run types",
+    "build:dev": "vite build --mode development && npm run types",
+    "types": "tsc -d --emitDeclarationOnly --outDir ./dist",
+    "lint": "tsc --noEmit && eslint .",
+    "format": "prettier . --write"
+  },
+  "peerDependencies": {
+    "marked": ">=7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tsconfig/node16": "^16.1.8",
+    "@types/node": "^25.2.2",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-cachedir": "^1.2.0"
+  }
+}
