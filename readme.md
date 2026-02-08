@@ -5,7 +5,6 @@ A [marked](https://marked.js.org/) extension to to support [magick.css](https://
 - [Install](#install)
 - [Usage](#usage)
 - [Limitations](#limitations)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Install
@@ -79,22 +78,6 @@ When considering the use of footnotes in your content, it's important to keep in
 
 1. **Screen Reader Compatibility**: Screen readers may not effectively convey footnotes. They tend to read the footnote number without indicating that it's a footnote or using superscript. Additionally, they may not identify the link to the footnote text.
 2. **Accessibility Challenges**: Footnotes pose challenges for all users on a web page. To access them, one often needs to scroll to the end of the page, read the footnote, and then click back to the main content. Not everyone is aware that they should click on the footnote at the end, potentially causing them to lose their place. Moreover, if the same footnote is repeated multiple times, clicking on the link could lead to the wrong location.
-
-## Contributing
-
-We 💛&nbsp; issues.
-
-When committing, please conform to [the semantic-release commit standards](https://www.conventionalcommits.org/). Please install `commitizen` and the adapter globally, if you have not already.
-
-```bash
-npm i -g commitizen cz-conventional-changelog
-```
-
-Now you can use `git cz` or just `cz` instead of `git commit` when committing. You can also use `git-cz`, which is an alias for `cz`.
-
-```bash
-git add . && git cz
-```
 
 ## License
 
