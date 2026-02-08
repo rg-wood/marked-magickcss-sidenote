@@ -1,6 +1,6 @@
 {
   "name": "marked-magickcss-sidenote",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A marked extension to support magick.css sidenotes as GFM footnotes",
   "main": "./dist/index.cjs",
   "keywords": [
