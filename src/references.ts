@@ -32,7 +32,7 @@ export function createFootnoteRef(lexer: LexerTokens) {
       const footnote = lexer.footnotes[ref.index]
       return `
         <span class="sidenote-anchor"></span>
-        <div class="sidenote">${footnote.text}</div>
+        <span class="sidenote">${footnote.text}</span>
       `
     }
   } as TokenizerAndRendererExtension
