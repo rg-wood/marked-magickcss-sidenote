@@ -28,7 +28,8 @@ export type Footnote = {
 export type FootnoteRef = {
   type: 'footnoteRef'
   raw: string
-  index: number
+  index: number,
+  footnote: Footnote
 }
 
 export type LexerTokens = {

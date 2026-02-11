@@ -10,7 +10,7 @@ export default function markedFootnote(): MarkedExtension {
   return {
     extensions: [
       createFootnote(lexer),
-      createFootnoteRef(lexer),
+      createFootnoteRef(),
       createFootnotes()
     ],
     walkTokens(token) {

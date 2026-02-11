@@ -1,7 +1,7 @@
 import type { TokenizerAndRendererExtension, TokenizerThis } from 'marked'
 import type { FootnoteRef, Footnotes, LexerTokens } from './types.js'
 
-export function createFootnoteRef(lexer: LexerTokens) {
+export function createFootnoteRef() {
   return {
     name: 'footnoteRef',
     level: 'inline',
@@ -23,16 +23,16 @@ export function createFootnoteRef(lexer: LexerTokens) {
           type: 'footnoteRef',
           raw,
           index: rawFootnote.refs.length,
+          footnote: rawFootnote
         }
 
         return ref
       }
     },
     renderer(ref: FootnoteRef) {
-      const footnote = lexer.footnotes[ref.index]
       return `
         <span class="sidenote-anchor"></span>
-        <span class="sidenote">${footnote.text}</span>
+        <span class="sidenote">${ref.footnote.text}</span>
       `
     }
   } as TokenizerAndRendererExtension
